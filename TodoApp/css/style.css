@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background: #edf0f1;
+}
+
+.noFill {
+    fill: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+
+/* header */
+
+header {
+    width: 100%;
+    height: 70px;
+    padding: 12px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 11;
+    background: #27b99a;
+    box-shadow: 0px 2px 4px rgba(44, 62, 80, 0.75);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+header input {
+    width: 100%;
+    height: 46px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    text-indent: 18px;
+    border-radius: 5px 23px 23px 5px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 0;
+    box-shadow: none;
+    outline: none;
+    /* -webkit-appearance: none; */
+}
+
+header input::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+header button {
+    z-index: 12;
+    width: 46px;
+    height: 46px;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    border-radius: 50%;
+    background: #fff;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    font-size: 2rem;
+    color: #27b99a;
+    /* -webkit-appearance: none; */
+}
+
+
+/* container */
+
+.container {
+    width: 100%;
+    margin-top: 70px;
+    padding: 14px 14px 0 14px;
+}
+
+.container .todo {
+    width: 100%;
+}
+
+.container .todo li {
+    position: relative;
+    width: 100%;
+    min-height: 50px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #444;
+    line-height: 22px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 1px 2px rgba(44, 62, 80, 0.2);
+    padding: 14px 0 0 14px;
+    margin: 0 0 10px 0;
+}
+
+.container .todo li:last-of-type {
+    margin: 0;
+}
+
+.container .todo .todoleft {
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.container .todo .todoleft button {
+    width: 50px;
+    height: 50px;
+    float: left;
+    border: 0;
+    background: none;
+    box-shadow: none;
+    outline: none;
+    position: relative;
+}
+
+ul.todo li .todoleft button:last-of-type:before {
+    content: '';
+    width: 2px;
+    height: 30px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    background: #edf0f1;
+}
+
+
+/*=============== remove ===============*/
+
+ul.todo li .todoleft button.remove {
+    font-size: 20px;
+    color: #e8d4d0;
+}
+
+ul.todo li .todoleft button.remove:hover {
+    font-size: 20px;
+    color: #ed7675;
+}
+
+
+/*================ complete =======================*/
+
+ul.todo li .todoleft button.complete {
+    font-size: 20px;
+    color: #27b99a;
+}
+
+
+/* 如果不是完成状态。那么改变背景颜色 */
+
+ul.todo:not(#completed) li .todoleft button.complete:hover {
+    background: #27b99a;
+    color: #fff;
+}
+
+ul.todo#completed li .todoleft button.complete {
+    background: #27b99a;
+    color: #fff;
+}
+
+
+/* 当完成列表拥有内容时，那么完成与未完成列表之间有50间隙 */
+
+ul.todo#completed:not(:empty) {
+    padding: 50px 0 0 0;
+    position: relative;
+}
+
+ul.todo#completed li:first-of-type:not(:empty)::before {
+    content: '';
+    width: 136px;
+    height: 2px;
+    background: #e8d4d0;
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    margin: 0 0 0 -68px;
+}
