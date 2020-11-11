@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>邀请好友活动页面</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <section class="aui-main">
+        <!-- 头部 -->
+        <header class="aui-navBar">
+            <a href="javascript:;" class="navBar-item">
+                <i class="icon icon-return"></i>
+            </a>
+            <div class="navBar-title">
+                <span class="navBar-title-center"> 
+                    邀请好友活动
+                </span>
+            </div>
+        </header>
+        <!-- body内容 -->
+        <section class="aui-context">
+            <div class="aui-invitation-head">
+                <img src="./image/head.jpg" class="aui-invitation-ad" alt="">
+                <!-- 轮播 -->
+                <div class="aui-flex aui-flex-color">
+                    <!-- <div class="aui-flex-box"> -->
+                    <div class="t_news" id="t_news">
+                        <ul class="news_li" id="news_li" style="top: 0px;">
+                            <li>
+                                <a href="javascript:return false;"><img src="image/user-logo-001.png" alt="">李嘉桦 已经获得一个现金红包8888元</a>
+                            </li>
+                            <li>
+                                <a href="javascript:return false;"><img src="image/user-logo-001.png" alt="">李嘉桦 已经获得一个现金红包88888元</a>
+                            </li>
+                            <li>
+                                <a href="javascript:return false;"><img src="image/user-logo-001.png" alt="">李嘉桦 已经获得一个现金红包88888元</a>
+                            </li>
+                            <li>
+                                <a href="javascript:return false;"><img src="image/user-logo-001.png" alt="">李嘉桦 已经获得一个现金红包888888元</a>
+                            </li>
+                            <li>
+                                <a href="javascript:return false;"><img src="image/user-logo-001.png" alt="">李嘉桦 已经获得一个现金红包888888元</a>
+                            </li>
+                        </ul>
+                        <!-- </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="aui-invitation-content">
+                <div class="aui-invitation-item">
+                    <div class="aui-invitation-title">
+                        <h2>NO.1 重礼</h2>
+                    </div>
+                    <div class="aui-coupon-body">
+                        <h2>888<em>元</em> </h2>
+                    </div>
+                    <div class="aui-coupon-text">
+                        <p>徒弟用户送实时运费劵，首次使用</p>
+                        <span>最高返现8888元</span>
+                    </div>
+                </div>
+                <div class="aui-invitation-item">
+                    <div class="aui-invitation-title">
+                        <h2>NO.2 重礼</h2>
+                    </div>
+                    <div class="aui-coupon-img">
+                        <img src="./image/coin.png" alt="">
+                    </div>
+                    <div class="aui-coupon-text">
+                        <p>徒弟的徒弟可为每位师傅提供</p>
+                        <span>1元的现金红包</span>
+                    </div>
+                </div>
+                <div class="aui-invitation-item">
+                    <div class="aui-invitation-title">
+                        <h2>NO.3 重礼</h2>
+                    </div>
+                    <div class="aui-coupon-text aui-coupon-text-top">
+                        <p>成功邀请好友注册认证信贷款的用户，您可以获得现金红包8888元(奖励)</p>
+                    </div>
+                    <div class="aui-invitation-table">
+                        <table>
+                            <tr>
+                                <th>邀请阶梯</th>
+                                <th>累计奖励订单</th>
+                            </tr>
+                            <tr>
+                                <td>邀请1人</td>
+                                <td>1个订单</td>
+                            </tr>
+                            <tr>
+                                <td>邀请2人</td>
+                                <td>3个订单</td>
+                            </tr>
+                            <tr>
+                                <td>邀请5人</td>
+                                <td>5个订单</td>
+                            </tr>
+                            <tr>
+                                <td>邀请6人</td>
+                                <td>6个订单</td>
+                            </tr>
+                            <tr>
+                                <td>邀请8人</td>
+                                <td>8个订单</td>
+                            </tr>
+                            <tr>
+                                <td>邀请9人</td>
+                                <td>9个订单</td>
+                            </tr>
+                            <tr>
+                                <td>邀请12人</td>
+                                <td>12个订单</td>
+                            </tr>
+                            <tr>
+                                <td>邀请14人</td>
+                                <td>14个订单</td>
+                            </tr>
+                            <tr>
+                                <td>邀请15人</td>
+                                <td>15个订单</td>
+                            </tr>
+                            <tr>
+                                <td>邀请22人</td>
+                                <td>22个订单</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 底部邀请 -->
+        <footer class="aui-footer" id="click-footer">
+            <a href="javascript:;" class="aui-tabBar-item">
+                <span class="aui-tabBar-item-text">邀请徒弟</span>
+            </a>
+        </footer>
+    </section>
+    <!-- 遮罩层 -->
+    <div class="mask" id="mask-show"></div>
+    <!-- 分享 -->
+    <div class="m-actionsheet" id="actionSheet">
+        <div class="aui-show-box">
+            <div class="auio-show-box-title">
+                <div class="b-line">
+                    <a href="javascript:;" class="aui-coll-share-item">
+                        <div class="aui-coll-share-img">
+                            <img src="/image/icon-wx.png" alt="">
+                        </div>
+                        <div class="aui-coll-share-text">微信好友</div>
+                    </a>
+                    <a href="javascript:;" class="aui-coll-share-item">
+                        <div class="aui-coll-share-img">
+                            <img src="/image/icon-pyq.png" alt="">
+                        </div>
+                        <div class="aui-coll-share-text">朋友圈</div>
+                    </a>
+                    <a href="javascript:;" class="aui-coll-share-item">
+                        <div class="aui-coll-share-img">
+                            <img src="/image/icon-qq.png" alt="">
+                        </div>
+                        <div class="aui-coll-share-text">QQ</div>
+                    </a>
+                    <a href="javascript:;" class="aui-coll-share-item">
+                        <div class="aui-coll-share-img">
+                            <img src="/image/icon-kj.png" alt="">
+                        </div>
+                        <div class="aui-coll-share-text">QQ空间</div>
+                    </a>
+                    <a href="javascript:;" class="aui-coll-share-item">
+                        <div class="aui-coll-share-img">
+                            <img src="/image/icon-txw.png" alt="">
+                        </div>
+                        <div class="aui-coll-share-text">腾讯微博</div>
+                    </a>
+                    <a href="javascript:;" class="aui-coll-share-item">
+                        <div class="aui-coll-share-img">
+                            <img src="/image/icon-wb.png" alt="">
+                        </div>
+                        <div class="aui-coll-share-text">新浪微博</div>
+                    </a>
+                </div>
+                <div class="aui-coll-cancel" id="cancel">
+                    <span class="">取消</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
