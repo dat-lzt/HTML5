@@ -18,29 +18,37 @@ cancel.onclick = function Cancel() {
         actionSheet.style.bottom = '-100%';
     }
     // 轮播组件
+    // movefunc()移动函数
 function movefunc() {
     var container = document.getElementsByClassName('news_li')[0];
     var oldBottomPos = parseInt(container.style.top);
     var Height = container.children[0].offsetHeight;
     var newBottomPos = oldBottomPos - Height;
-    // var imgNum = container.children.length;
     container.style.top = newBottomPos + "px";
-    console.log(container.style.top)
 }
 
 function autoRullImg() {
-    // var showContainer = document.getElementById("t_news")[0];
     var timer = null;
-
+    var showContainer = document.getElementById("t_news")[0];
+    var container = document.getElementsByClassName('news_li')[0];
+    var imgNum = container.children.length;
+    var Height = container.children[0].offsetHeight;
+    // rullAuto()自滚动函数
     function rullAuto() {
-        timer = setInterval("movefunc()", 800); //每隔800毫秒执行一次移动函数
-        // if (parseInt(container.style.top) <= -imgNum * Height){
-
-        // }
+        // timer = setInterval("movefunc()", 800); //每隔800毫秒执行一次移动函数
+        timer = setInterval(function() {
+            movefunc();
+            if (parseInt(container.style.top) <= -imgNum * Height) {
+                container.style.top = '0px';
+            }
+        }, 3000);
     }
     rullAuto();
-    // showContainer.onmouseout = function() {
-    //     rullAuto();
-    // };
+    showContainer.onmouseover = function() {
+        clearInterval(timer);
+    };
+    showContainer.onmouseout = function() {
+        rullAuto();
+    };
 }
 window.onload = autoRullImg;

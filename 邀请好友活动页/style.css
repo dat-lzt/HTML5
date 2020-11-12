@@ -255,18 +255,18 @@ table tr:nth-child(2n+1) {
 }
 
 .aui-flex-box {
-    /* flex: 1;
+    flex: 1;
     min-width: 0;
     font-size: 14px;
     color: #333;
     height: 25px;
-    overflow: hidden;
+    /* overflow: hidden; */
     width: 100%;
     text-overflow: ellipsis;
     white-space: nowrap;
     word-wrap: normal;
     word-wrap: break-word;
-    word-break: break-all; */
+    word-break: break-all;
 }
 
 .t_news {
@@ -274,17 +274,6 @@ table tr:nth-child(2n+1) {
     color: #fff;
     overflow: hidden;
     position: relative;
-    flex: 1;
-    min-width: 0;
-    font-size: 14px;
-    color: #333;
-    height: 25px;
-    width: 100%;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    word-wrap: normal;
-    word-wrap: break-word;
-    word-break: break-all;
 }
 
 .news_li {
