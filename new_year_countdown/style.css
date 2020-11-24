@@ -63,3 +63,10 @@ h1 {
 small {
     font-size: 0.9rem;
 }
+
+@media (min-width: 800px) {
+    .time h2,
+    small {
+        font-size: 25px;
+    }
+}
