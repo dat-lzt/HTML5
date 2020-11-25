@@ -39,6 +39,7 @@ a {
     flex-direction: row;
     z-index: 1000;
     position: relative;
+    /* display: none; */
 }
 
 .navBar-item {
@@ -95,7 +96,13 @@ a {
     flex: 1;
     overflow-y: auto;
     overflow-x: hidden;
+    /* overflow: auto; */
     position: relative;
+}
+
+.demo-context {
+    height: 1000px;
+    background-color: #000;
 }
 
 .aui-invitation-head {
